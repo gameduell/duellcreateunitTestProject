@@ -16,7 +16,7 @@ class PluginCreate
 
     }
 
-    public function run(args : Array<String>) : String
+    public function run() : String
     {
         if (sys.FileSystem.exists(haxe.io.Path.join([Sys.getCwd(), duell.defines.DuellDefines.PROJECT_CONFIG_FILENAME])))
         {
