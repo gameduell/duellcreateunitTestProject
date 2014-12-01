@@ -1,7 +1,6 @@
 import duell.DuellKit;
 
-import asyncrunner.DelayedTask;
-import asyncrunner.FunctionTask;
+import runloop.RunLoop;
 
 class AsyncTest extends unittest.TestCase
 {
@@ -9,7 +8,7 @@ class AsyncTest extends unittest.TestCase
     {
         assertEquals("string", "string");
 
-        DelayedTask.delay(function() assertAsyncFinish(test1), 0.5);
+        RunLoop.getMainLoop().delay(function() assertAsyncFinish(test1), 0.5);
 
         assertAsyncStart(test1);
     }
@@ -18,7 +17,7 @@ class AsyncTest extends unittest.TestCase
     {
         assertAsyncStart(test2, 0.1);
 
-        DelayedTask.delay(function() assertAsyncFinish(test2), 0.5);
+        RunLoop.getMainLoop().delay(function() assertAsyncFinish(test2), 0.5);
 
         assertShouldFail();
         ///should timeout
@@ -29,7 +28,7 @@ class AsyncTest extends unittest.TestCase
         ///after 500ms, test2 timeout should happen
         assertAsyncStart(test3, 2);
 
-        DelayedTask.delay(function() assertAsyncFinish(test3), 1.0);
+        RunLoop.getMainLoop().delay(function() assertAsyncFinish(test3), 1.0);
     }
 
 
