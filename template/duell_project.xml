@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project>
-	
-	<app title="Test Testing" file="TestTesting" package="com.gameduell.tests" version="0.0.1" company="GameDuell GmbH" />
-	<main name="MainTester" />
+<project xmlns="duell">
 
-	<source path="Source" />
+    <supported-duell-tool version="1.4.0+" />
 
-	<duelllib name="duellkit" version="1.*.*" />
-	<duelllib name="unittest" version="1.*.*"/>
+    <app title="Test Testing" file="TestTesting" package="com.gameduell.tests" version="0.0.1" company="GameDuell GmbH" />
+    <main name="MainTester" />
+
+    <source path="Source" />
+
+    <duelllib name="duellkit" version="1.0.0+" />
+    <duelllib name="unittest" version="1.0.0+"/>
 	
 </project>
 
