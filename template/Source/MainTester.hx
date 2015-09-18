@@ -7,7 +7,7 @@ import unittest.TestRunner;
 import SimpleTest;
 import AsyncTest;
 
-import duell.DuellKit;
+import duellkit.DuellKit;
 
 class MainTester
 {
