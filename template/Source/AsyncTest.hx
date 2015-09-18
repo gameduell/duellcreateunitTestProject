@@ -1,4 +1,4 @@
-import duell.DuellKit;
+import duellkit.DuellKit;
 
 import runloop.RunLoop;
 
