@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project xmlns="duell">
 
-    <supported-duell-tool version="2.0.0+" />
-
     <app title="Test Testing" file="TestTesting" package="com.gameduell.tests" version="0.0.1" company="GameDuell GmbH" />
     <main name="MainTester" />
 
