@@ -22,17 +22,14 @@ class MainTester
         r.add(new SimpleTest());
         r.add(new AsyncTest());
 
-        #if test
-
         #if jenkins
-        r.addLogger(new TestHTTPLogger(new TestJUnitLogger()));
+            r.addLogger(new TestHTTPLogger(new TestJUnitLogger()));
         #else
-        r.addLogger(new TestHTTPLogger(new TestSimpleLogger()));
+            r.addLogger(new TestHTTPLogger(new TestSimpleLogger()));
         #end
 
-        #else
-        r.addLogger(new TestSimpleLogger());
-        #end
+        //To run unittests on devices with android version < 5.0 don't use an HTTPLogger
+        //r.addLogger(new TestSimpleLogger());
 
         r.run();
     }
